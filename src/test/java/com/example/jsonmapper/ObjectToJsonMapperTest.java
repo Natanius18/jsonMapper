@@ -3,7 +3,9 @@ package com.example.jsonmapper;
 import static com.example.jsonmapper.ObjectToJsonMapper.toJson;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
@@ -31,6 +33,8 @@ class ObjectToJsonMapperTest {
             .setFirstName("John")
             .setLastName("Smith")
             .setAge(27)
+            .setDateOfBirth(LocalDateTime.of(1997, 5, 20, 12, 0))
+            .setGender('M')
             .setActive(true)
             .setAddress(address)
             .setPhoneNumbers(List.of(homePhone, officePhone))
